@@ -1,0 +1,104 @@
+
+/* common styles */
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --darker-gray: hsl(0, 0%, 41%);
+}
+
+/* Border box declaration */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Geneva, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* end of common styles */
+
+/* body styles */
+
+header {
+    position: absolute;
+}
+
+h3 {
+    color: var(--white);
+}
+
+.hero {
+    margin: 0;
+}
+
+.hero > img {
+    padding: 0;
+    max-width: 100%;
+}
+
+h1 {
+    position: absolute;
+    padding: 10px;
+
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+
+    color: var(--white);
+    border: var(--white) 1pt solid;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    padding: 5%;
+    max-width: 100%;
+}
+
+p {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: var(--white);
+}
+
+
+/* end of body styles */
