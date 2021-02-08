@@ -27,6 +27,7 @@ body {
 }
 
 html, body {
+    width: 100%;
     height: 100%;
 }
 
@@ -35,11 +36,40 @@ html, body {
 /* body styles */
 
 header {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
     position: absolute;
 }
 
 h3 {
+    margin: 0;
+    font-size: 2.5em;
     color: var(--white);
+}
+
+header > div:first-child {
+    margin: 10% 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.nav-ham {
+    margin: 10% 5%;
+}
+
+.nav-ham__line {
+    width: 30px;
+    height: 2px;
+
+    margin: 6px;
+
+    background-color: var(--white);
 }
 
 .hero {
@@ -53,20 +83,24 @@ h3 {
 
 h1 {
     position: absolute;
-    padding: 10px;
+    padding: 6% 8%;
+    margin: 5%;
 
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    font-size: 4em;
 
     color: var(--white);
-    border: var(--white) 1pt solid;
+    border: var(--white) 2pt solid;
 }
 
 h2 {
     text-transform: uppercase;
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    font-size: 3.125em;
 }
 
 h4 {
@@ -81,6 +115,7 @@ img {
 }
 
 p {
+    text-align: center;
     font-family: 'Alata', sans-serif;
     font-weight: 400;
 }
