@@ -29,11 +29,52 @@ body {
 html, body {
     width: 100%;
     height: 100%;
+    min-width: 375px;
 }
 
 /* end of common styles */
 
 /* body styles */
+
+.modal {
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+    touch-action: none;
+    
+    position: fixed;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: var(--black);
+
+    transition: all .3s;
+}
+
+.modal > nav {
+    width: 100%;
+    height: 100%;
+    visibility: inherit;
+    opacity: inherit;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal > nav a {
+    margin: 2rem;
+    color: var(--white);
+    
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.125em;
+    text-decoration: none;
+}
 
 header {
     width: 100%;
@@ -45,6 +86,7 @@ header {
     align-items: center;
 
     position: absolute;
+    z-index: 2;
 }
 
 header > div:first-child {
