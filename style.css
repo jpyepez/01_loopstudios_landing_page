@@ -64,16 +64,19 @@ html, body {
     align-items: flex-start;
 }
 
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
 .modal > nav a {
     margin: 1.5rem;
-    color: var(--white);
     
     text-transform: uppercase;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 3em;
-    text-decoration: none;
 }
 
 header {
@@ -99,6 +102,10 @@ header img {
     height: auto;
     padding: 0;
     margin-top: 3px;
+}
+
+header nav {
+    display: none;
 }
 
 [type="checkbox"] {
@@ -160,11 +167,19 @@ header img {
 
 .hero {
     margin: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
-.hero > img {
+.hero > picture {
+    width: 100%;
+}
+
+.hero > picture img {
+    width: 100%;
     padding: 0;
-    max-width: 100%;
 }
 
 .hero__desktop {
@@ -172,8 +187,9 @@ header img {
 }
 
 h1 {
+    max-width: 340px;
     position: absolute;
-    padding: 6% 8%;
+    padding: 30px 30px;
     margin: 10%;
 
     text-transform: uppercase;
@@ -323,14 +339,60 @@ footer > p {
 
 /* responsive design */
 
+@media all and (min-width: 750px) {
+
+    .hero {
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin: 5rem 0 0 6%;
+        max-width: 380px;
+    }
+
+
+}
+
+
 @media all and (min-width: 1000px) {
 
-    .hero > img {
+    header > div:first-child {
+        width: 20rem;
+    }
+
+    h1 {
+        max-width: 560px;
+        font-size: 6em;
+    }
+
+    .menu-toggle {
         display: none;
     }
 
-    .hero .hero__desktop {
+    header {
+        height: 15rem;
+    }
+
+    header nav {
         display: block;
+
+        font-family: 'Alata', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    header nav a {
+        padding: 0 1.5rem;
+
+    }
+}
+
+@media all and (min-width: 1440px) {
+
+    h1 {
+        margin: 7rem 0 0 6%;
+        max-width: 720px;
+        font-size: 7em;
     }
 
 }
