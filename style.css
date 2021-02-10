@@ -65,14 +65,14 @@ html, body {
 }
 
 .modal > nav a {
-    margin: 2rem;
+    margin: 1.5rem;
     color: var(--white);
     
     text-transform: uppercase;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
-    font-size: 3.125em;
+    font-size: 3em;
     text-decoration: none;
 }
 
@@ -165,6 +165,10 @@ header img {
 .hero > img {
     padding: 0;
     max-width: 100%;
+}
+
+.hero__desktop {
+    display: none;
 }
 
 h1 {
@@ -262,6 +266,8 @@ button {
     background-color: var(--white);
 
     border: solid 1px var(--black);
+
+    outline: none;
 }
 
 footer {
@@ -274,6 +280,7 @@ footer {
 }
 
 footer > img {
+    margin: 3rem 0 1rem;
     width: 18rem;
 }
 
@@ -282,6 +289,7 @@ footer a {
 }
 
 footer > nav {
+    padding: 1.5rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -292,6 +300,10 @@ footer > nav {
     font-weight: 400;
 }
 
+footer > nav a {
+    padding: 1rem;
+}
+
 .social-media {
     display: flex;
     flex-flow: row nowrap;
@@ -299,5 +311,30 @@ footer > nav {
     align-items: center;
 }
 
+.social-media a {
+    padding: .75rem;
+}
+
+footer > p {
+    padding: 1rem;
+}
 
 /* end of body styles */
+
+/* responsive design */
+
+@media all and (min-width: 1000px) {
+
+    .hero > img {
+        display: none;
+    }
+
+    .hero .hero__desktop {
+        display: block;
+    }
+
+}
+
+
+
+/* end of responsive design */
