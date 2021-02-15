@@ -30,6 +30,7 @@ html, body {
     width: 100%;
     height: 100%;
     min-width: 375px;
+
 }
 
 /* end of common styles */
@@ -67,6 +68,40 @@ html, body {
 a {
     color: var(--white);
     text-decoration: none;
+}
+
+header nav > div{
+    display: inline-block;
+    position: relative;
+}
+
+header nav a::after {
+    display: inline-block;
+    content: "";
+
+    position: absolute;
+    top: 140%;
+    left: calc(50% - 1.5rem);
+
+    background-color: hsla(0, 0%, 0%, 0);
+
+    transition: all .5s;
+
+}
+
+header nav a:hover::after {
+    display: inline-block;
+    width: 3rem;
+    height: 2px;
+    content: "";
+
+    position: absolute;
+    top: 140%;
+    left: calc(50% - 1.5rem);
+
+    background-color: var(--white);
+
+    transition: all .5s;
 }
 
 .modal > nav a {
@@ -284,6 +319,15 @@ button {
     border: solid 1px var(--black);
 
     outline: none;
+
+    transition: all .5s;
+}
+
+button:hover {
+    color: var(--white);
+    background-color: var(--black);
+
+    transition: all .5s;
 }
 
 footer {
@@ -407,6 +451,11 @@ footer > p {
         font-size: 7em;
     }
 
+    h2 {
+        font-size: 4.5em;
+
+    }
+
     footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -432,6 +481,98 @@ footer > p {
     .copyright {
         margin: 0 10rem 4rem 0;
         text-align: right;
+    }
+
+    .vr-section {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+
+    .vr-section img {
+        width: 65%;
+        padding: 10rem 0 10rem 16.25rem;
+
+    }
+
+    .vr-section h2 {
+        width: 40rem;
+        margin-top: 0;
+
+        text-align: left;
+    }
+
+    .vr-section div {
+        width: 64.5rem;
+        padding: 10rem;
+        position: absolute;
+        top: 45%;
+        left: 52%;
+        z-index: 1;
+
+        background-color: var(--white);
+    }
+
+    .vr-section p {
+        padding: 0;
+        width: 92.5%;
+        text-align: left;
+    }
+
+    .our-creations {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        padding: 15rem;
+    }
+
+    .our-creations h2 {
+        grid-row: 1/2;
+        grid-column: 1/4;
+
+        text-align: left;
+    }
+
+    .our-creations button {
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+
+    .our-creations h2 {
+        padding-left: 2rem;
+    }
+
+    .our-creations div::before {
+        width: 256px;
+        height: 450px;
+
+        background: linear-gradient(to top, var(--black) 20%, hsla(0, 0%, 0%, 0) 80%);
+
+        transition: all .5s;
+    }
+
+    .our-creations div:hover::before {
+        background: hsla(0, 100%, 100%, 80);
+
+        transition: all .5s;
+    }
+
+    .our-creations div:hover > h4 {
+        color: var(--black);
+        transition: all .5s;
+    }
+
+    .our-creations img {
+        padding-bottom: 5%;
+    }
+
+    h4 {
+        font-size: 3em;
+        left: 6%;
+        bottom: 10%;
     }
 
 }
